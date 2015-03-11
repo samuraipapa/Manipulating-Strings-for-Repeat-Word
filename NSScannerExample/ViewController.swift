@@ -25,6 +25,11 @@ extension String {
 
 class ViewController: UIViewController {
 
+    
+    // gobal collections
+    var submittedTextArray = [""]
+    
+    // UIStuff
     @IBOutlet weak var textViewInput: UITextView!
     
     @IBOutlet weak var textViewOutput: UITextView!
@@ -39,7 +44,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //scannerEx1()
-        printAttributedText()
+        makeArrayFromTextViewString()
+        
+        findRepeatedwords()
+        
+      //  printAttributedText()
+        
         
     }
 
@@ -49,6 +59,20 @@ class ViewController: UIViewController {
     }
 
  
+    func makeArrayFromTextViewString(){
+        
+        submittedTextArray = textViewInput.text.wordList
+        println(submittedTextArray)
+    }
+    
+
+    func findRepeatedwords(){
+    
+        var repeatedWords : Array = ["",]
+        
+    }
+    
+    
     func printAttributedText(){
         
         // Code orginally from http://www.ioscreator.com/tutorials/attributed-strings-tutorial-ios8-swift
