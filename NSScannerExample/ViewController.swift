@@ -28,6 +28,9 @@ class ViewController: UIViewController {
     
     // gobal collections
     var submittedTextArray = [""]
+    var copySubmittedTextArray  = [""]
+    var repeatedWordList = [""]
+    var repeatedWordDictionary = ["start":0]
     
     // UIStuff
     @IBOutlet weak var textViewInput: UITextView!
@@ -68,9 +71,61 @@ class ViewController: UIViewController {
 
     func findRepeatedwords(){
     
-        var repeatedWords : Array = ["",]
         
+        for word in submittedTextArray{
+            copySubmittedTextArray.append(word)
+            
+            
+        }
+
+        println("Repeated Words Array:  \(copySubmittedTextArray)")
+
+        lookForRepeatWords()
     }
+    
+    
+    
+    func lookForRepeatWords(){
+        
+        
+        
+        for eachWord in submittedTextArray{
+            for everyWord in copySubmittedTextArray{
+                if eachWord == everyWord {
+                    
+                    
+         //           var str9 = String(count: 2,repeatedValue: String("the"))
+           //         println("str9 :\(str9)")
+                    
+                    
+                    let match = everyWord
+
+                    if (everyWord != repeatedWordDictionary.keys) {
+                    repeatedWordList.append(everyWord)
+                    repeatedWordDictionary.updateValue( 0, forKey: everyWord)
+                    
+                    }
+                    
+                    println("Added to repeatedWordDictionary: \(repeatedWordDictionary)")
+                }
+                    else {
+                        
+                 //       self.copySubmittedTextArray.removeLast()
+                    
+                 //   println("Word Erased: \(everyWord)")
+                }
+                
+               // println("Repeats: \(everyWord)")
+                
+        //        println(repeatedWordList)
+            
+            }
+            }
+            
+         //   if word ==
+        }
+        
+    
     
     
     func printAttributedText(){
@@ -78,7 +133,9 @@ class ViewController: UIViewController {
         // Code orginally from http://www.ioscreator.com/tutorials/attributed-strings-tutorial-ios8-swift
         // 1
   
-        let string = textViewInput.text as NSString
+        let string = self.textViewInput.text as NSString
+      
+        
         
    //    let string = "Testing Attributed Strings" as NSString
         

@@ -171,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6C7D1E691AAE27F0005C4E8E /* Build configuration list for PBXProject "NSScannerExample" */;
+			buildConfigurationList = 6C7D1E691AAE27F0005C4E8E /* Build configuration list for PBXProject "WordPoem" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -393,7 +393,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6C7D1E691AAE27F0005C4E8E /* Build configuration list for PBXProject "NSScannerExample" */ = {
+		6C7D1E691AAE27F0005C4E8E /* Build configuration list for PBXProject "WordPoem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C7D1E8B1AAE27F0005C4E8E /* Debug */,
@@ -409,6 +409,7 @@
 				6C7D1E8F1AAE27F0005C4E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C7D1E901AAE27F0005C4E8E /* Build configuration list for PBXNativeTarget "NSScannerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				6C7D1E921AAE27F0005C4E8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
