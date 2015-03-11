@@ -1,22 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NSScannerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-G4-uv1">
+                                <rect key="frame" x="0.0" y="42" width="320" height="198"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The efforts of cruise lines to meet consumer demand has exploded into an expansive array of vacation options, from intimate yacht-like departures to floating family-friendly theme parks. The 63 cruise company members of the Cruise Line Industry Association estimate passenger volume will grow to 23 million this year, up nearly a million over 2014. Most of the traffic circulates in the Caribbean, but the following trends signal growing wanderlust among cruisers.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-Ya-h8I">
+                                <rect key="frame" x="0.0" y="287" width="320" height="268"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-rE-DVU">
+                                <rect key="frame" x="181" y="235" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="47y-O2-yh8"/>
+                                </constraints>
+                                <state key="normal" title="Poemize it!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPoemize:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b96-EI-IT2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pfX-rE-DVU" secondAttribute="trailing" constant="10" id="48a-Rq-bV9"/>
+                            <constraint firstItem="Vkn-G4-uv1" firstAttribute="leading" secondItem="k6o-Ya-h8I" secondAttribute="leading" id="5ER-2C-nCT"/>
+                            <constraint firstItem="k6o-Ya-h8I" firstAttribute="top" secondItem="Vkn-G4-uv1" secondAttribute="bottom" constant="47" id="LZ6-2e-NNn"/>
+                            <constraint firstItem="k6o-Ya-h8I" firstAttribute="top" secondItem="pfX-rE-DVU" secondAttribute="bottom" constant="22" id="Pud-Ni-fW9"/>
+                            <constraint firstAttribute="trailing" secondItem="k6o-Ya-h8I" secondAttribute="trailing" id="Q0c-6M-nZX"/>
+                            <constraint firstItem="k6o-Ya-h8I" firstAttribute="trailing" secondItem="Vkn-G4-uv1" secondAttribute="trailing" id="U6I-CG-4g7"/>
+                            <constraint firstItem="Vkn-G4-uv1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="W5P-Xa-TBA"/>
+                            <constraint firstItem="pfX-rE-DVU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="215" id="a4A-0r-phR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="k6o-Ya-h8I" secondAttribute="bottom" constant="13" id="ouk-PX-EjU"/>
+                            <constraint firstItem="Vkn-G4-uv1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="22" id="ykx-ka-Iqy"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="textViewInput" destination="Vkn-G4-uv1" id="xcc-PW-aGI"/>
+                        <outlet property="textViewOutput" destination="k6o-Ya-h8I" id="4An-vZ-syN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

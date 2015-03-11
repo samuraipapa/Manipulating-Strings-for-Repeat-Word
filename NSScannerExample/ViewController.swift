@@ -25,10 +25,21 @@ extension String {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textViewInput: UITextView!
+    
+    @IBOutlet weak var textViewOutput: UITextView!
+    
+    @IBAction func buttonPoemize(sender: UIButton) {
+       printAttributedText()
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        scannerEx1()
+        //scannerEx1()
+        printAttributedText()
         
     }
 
@@ -42,8 +53,13 @@ class ViewController: UIViewController {
         
         // Code orginally from http://www.ioscreator.com/tutorials/attributed-strings-tutorial-ios8-swift
         // 1
+  
+        let string = textViewInput.text as NSString
         
-        let string = "Testing Attributed Strings" as NSString
+   //    let string = "Testing Attributed Strings" as NSString
+        
+//        let myParagraph
+        
         var attributedString = NSMutableAttributedString(string: string)
         
         // 2
@@ -52,13 +68,14 @@ class ViewController: UIViewController {
         let thirdAttributes = [NSForegroundColorAttributeName: UIColor.greenColor(), NSBackgroundColorAttributeName: UIColor.blackColor(), NSFontAttributeName: UIFont.systemFontOfSize(40)]
         
         // 3
-        attributedString.addAttributes(firstAttributes, range: string.rangeOfString("Testing"))
-        attributedString.addAttributes(secondAttributes, range: string.rangeOfString("Attributed"))
-        attributedString.addAttributes(thirdAttributes, range: string.rangeOfString("Strings"))
+        attributedString.addAttributes(firstAttributes, range: string.rangeOfString("the"))
+        attributedString.addAttributes(secondAttributes, range: string.rangeOfString("The"))
+        attributedString.addAttributes(thirdAttributes, range: string.rangeOfString(string))
+        
         
         // 4
-        attributedLabel.attributedText = attributedString
-    }
+        textViewOutput.attributedText = attributedString
+    
     }
     
     func scannerEx1(){
